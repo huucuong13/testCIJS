@@ -70,3 +70,6 @@ alternatingSums(team)
 // B 
 
 
+
+
+

@@ -5,15 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./reset.css">
 </head>
 <body>
-    <div class="color" id="color">
-        <div class="myColor"> 
-        </div>    
-        <div class="pickColor"></div>
-    </div>
+    
+        <div class="color" id="color">
+            <span id="hex"> #e74c3c </span>
+            <button onclick="colorPick()"> Color Pick</button>
+        </div>
 
+    <script type="text/javascript">
+        function colorPick() {
+            let kyTu, color;
+            kyTu = "0123456789ABCDEF";
+            color = "#";
+            for (let i = 0; i < 6; i++) {
+                color = color + kyTu[Math.floor(Math.random() * 16)];
+            }
+            document.body.style.background = color;
+            document.getElementById("hex").innerHTML = color;
+        }
+    </script>
     <script src="./index.js"></script>
 </body>
 </html>
